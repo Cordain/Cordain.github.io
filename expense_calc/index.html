@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello wasm-pack!</title>
+  </head>
+  <body>
+    <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+    <label for="buyer">Who bought:</label><br>
+    <input type="text" id="buyer" name="buyer" value="Lucifer"><br>
+
+    <label for="amount">For how much:</label><br>
+    <input type="number" id="amount" name="amount" value=666.00><br>
+
+    <label for="owers">Who owes for this:</label><br>
+    <input type="text" id="owers" name="owers" value="Adam, Eve"><br><br>
+
+    <button id="add_expense">Add Expense</button><br>
+    <textarea id="expenses_list" rows="10" cols="70" readonly></textarea><br>
+    <button id="calculate">Calculate Expenses</button>
+    <table id="report">
+
+    </table>
+    <script src="./bootstrap.js"></script>
+  </body>
+</html>
