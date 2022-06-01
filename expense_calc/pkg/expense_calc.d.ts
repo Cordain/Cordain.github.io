@@ -24,6 +24,9 @@ export class Calculator {
 */
   add_ower_to_expense(ower: string, expense_idx: number): boolean;
 /**
+*/
+  revert_expense(): void;
+/**
 * @returns {string}
 */
   print_expenses(): string;
@@ -41,6 +44,7 @@ export interface InitOutput {
   readonly calculator_new: () => number;
   readonly calculator_add_expense: (a: number, b: number, c: number, d: number) => number;
   readonly calculator_add_ower_to_expense: (a: number, b: number, c: number, d: number) => number;
+  readonly calculator_revert_expense: (a: number) => void;
   readonly calculator_print_expenses: (a: number, b: number) => void;
   readonly calculator_calculate: (a: number, b: number) => void;
   readonly greet: () => void;

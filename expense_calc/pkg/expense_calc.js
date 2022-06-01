@@ -137,6 +137,11 @@ export class Calculator {
         return ret !== 0;
     }
     /**
+    */
+    revert_expense() {
+        wasm.calculator_revert_expense(this.ptr);
+    }
+    /**
     * @returns {string}
     */
     print_expenses() {
