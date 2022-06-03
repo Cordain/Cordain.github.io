@@ -14,18 +14,17 @@ export class Calculator {
 /**
 * @param {string} buyer
 * @param {number} amount
-* @returns {number}
+* @param {boolean} buyer_included
+* @param {any[]} owers
+* @returns {boolean}
 */
-  add_expense(buyer: string, amount: number): number;
+  add_expense(buyer: string, amount: number, buyer_included: boolean, owers: any[]): boolean;
 /**
 * @param {string} ower
 * @param {number} expense_idx
 * @returns {boolean}
 */
   add_ower_to_expense(ower: string, expense_idx: number): boolean;
-/**
-*/
-  revert_expense(): void;
 /**
 * @returns {string}
 */
@@ -42,9 +41,8 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly __wbg_calculator_free: (a: number) => void;
   readonly calculator_new: () => number;
-  readonly calculator_add_expense: (a: number, b: number, c: number, d: number) => number;
+  readonly calculator_add_expense: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => number;
   readonly calculator_add_ower_to_expense: (a: number, b: number, c: number, d: number) => number;
-  readonly calculator_revert_expense: (a: number) => void;
   readonly calculator_print_expenses: (a: number, b: number) => void;
   readonly calculator_calculate: (a: number, b: number) => void;
   readonly greet: () => void;

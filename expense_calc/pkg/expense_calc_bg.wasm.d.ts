@@ -3,9 +3,8 @@
 export const memory: WebAssembly.Memory;
 export function __wbg_calculator_free(a: number): void;
 export function calculator_new(): number;
-export function calculator_add_expense(a: number, b: number, c: number, d: number): number;
+export function calculator_add_expense(a: number, b: number, c: number, d: number, e: number, f: number, g: number): number;
 export function calculator_add_ower_to_expense(a: number, b: number, c: number, d: number): number;
-export function calculator_revert_expense(a: number): void;
 export function calculator_print_expenses(a: number, b: number): void;
 export function calculator_calculate(a: number, b: number): void;
 export function greet(): void;
