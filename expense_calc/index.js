@@ -50,7 +50,8 @@ async function calc_on_click(event){
     const currency = ext_calculator.confirm_currency(target_currency.value);
     table.innerHTML = "";
 
-    const calc_report = await ext_calculator.calculate(currency);
+    ext_calculator = await ext_calculator.update_target_currency(currency);
+    const calc_report = ext_calculator.calculate();
     
     
     if(calc_report !== undefined){
@@ -83,8 +84,8 @@ clear_data.addEventListener("click", event =>{
     alert("Site has been cleared!");
 })
 
-function init_site(){
-    ext_calculator = Calculator.new();
+async function init_site(){
+    ext_calculator = await Calculator.new();
     const currencies = JSON.parse(ext_calculator.get_currencies());
     expenses_list.textContent = ext_calculator.print_expenses();
     buyer.value = "";
